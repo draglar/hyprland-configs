@@ -1,0 +1,6 @@
+#!/bin/sh
+#sass ~/.config/hypr/component/waybar/style.scss ~/.config/hypr/component/waybar/style.css
+#killall waybar
+#./launch_waybar &
+
+cd ~/.config/hypr/scripts;killall waybar;./launch_waybar&

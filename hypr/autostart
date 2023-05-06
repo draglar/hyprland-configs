@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+
+# variables
+config=$HOME/.config/hypr
+scripts=$config/scripts
+
+# notification daemon
+dunst &
+
+# waybar
+#$scripts/relaunch_waybar &
+#$scripts/launch_waybar &
+#$scripts/tools/dynamic &
+
+# wallpaper
+$scripts/wall $config/wallpapers/maxime.jpg &
+#wal -i $config/wallpapers/maxime.jpg &
+# effects
+$scripts/rgb &
+
+# waybar
+#$scripts/launch_waybar &
+$scripts/tools/dynamic &
+#wait
+#$scripts/relaunch_
+#bash ~/tt.sh
+# other
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+notify-send -a aurora "Hello $(whoami)" &

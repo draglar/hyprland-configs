@@ -1,0 +1,14 @@
+#!/bin/sh
+
+CONFIG_FILES="$HOME/.config/hypr/component/waybar/style.css"
+#config=$HOME/.config/hypr
+#scripts=$config/scripts
+trap "killall waybar" EXIT
+
+while true; do
+#    waybar &
+#    pkill waybar
+    ./launch_waybar &
+    inotifywait -e modify $CONFIG_FILES
+    killall waybar
+done

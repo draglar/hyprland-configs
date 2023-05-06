@@ -1,0 +1,121 @@
+@import "../../.cache/wal/colors.scss";
+//Animations
+
+@keyframes gradient {
+  0% {
+          background-position: 0% 50%;
+  }
+  50% {
+          background-position: 100% 30%;
+  }
+  100% {
+          background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient_f {
+  0% {
+          background-position: 0% 200%;
+  }
+50% {
+  background-position: 200% 0%;
+}
+  100% {
+          background-position: 400% 200%;
+  }
+}
+
+@keyframes gradient_f_nh {
+  0% {
+          background-position: 0% 200%;
+  }
+  100% {
+          background-position: 200% 200%;
+  }
+}
+// Xtra
+window {
+  font-family: "Hacked-KerX" ,"Kollektif" ,  "DejaVu Sans", "Font Awesome 5 Free";
+  margin: 0px;
+  // border: 5px solid $color9;
+  background-color: $color9;
+  border-radius: 15px;
+}
+
+#input {
+  padding: 4px;
+  margin: 4px;
+  padding-left: 20px;
+  border: none;
+  color: $foreground;
+  font-weight: bold;
+  background-color: $background;
+  // background: linear-gradient(90deg, $color1 0%, $color5 100%);
+  outline: none;
+  border-radius: 15px;
+  margin: 10px;
+  margin-bottom: 2px;
+}
+#input:focus {
+  // border: 0px solid #fff;
+  margin-bottom: 0px;
+}
+
+#inner-box {
+  margin: 4px;
+  // border: 10px solid $background;
+  color: $foreground;
+  font-weight: bold;
+  background-color: $color9;
+  border-radius: 15px;
+}
+
+#outer-box {
+  margin: 0px;
+  border: none;
+  border-radius: 15px;
+  background-color: $color9;
+}
+
+#scroll {
+  margin-top: 5px;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  /* background: rgb(255,255,255); */
+}
+#text{
+  color:$color7;
+  padding-left:15px;
+}
+#text:selected {
+  color: $color0;
+  margin: 0px 0px;
+  border: none;
+  padding-left:20px;
+  //border-radius: 15px;
+  background-color:transparent;
+}
+
+#entry {
+  margin: 0px 0px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  font-size: large;
+  text-align: center;
+  // background-color: $color8;
+}
+#entry:focus {
+  border: none;
+}
+#entry:selected {
+  margin: 0px 0px;
+  border: none;
+  border-radius: 15px;
+  border: 2px solid $background;
+  background: linear-gradient(45deg, $color2 10%, $color3 40%, $color3 100%);
+  // background: rgb(203,166,247);
+  // background: radial-gradient(circle, $color0 0%, $color1 12%, $color2 19%, $color3 20%, $color4 24%, $color5 36%, $color6 37%, $color7 48%, $color8 52%, $color9 52%, $color10 59%, $color11 66%, $color12 67%, $color13 68%, $color14 77%, $color10 78%, $color3 82%, $color2 83%, $color1 90%, $color0 100%);
+  animation: gradient_f 2s ease-in-out infinite;
+}

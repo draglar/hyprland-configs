@@ -1,0 +1,17 @@
+#!/bin/sh
+swww init
+
+swww img $1 --transition-type grow --transition-pos "$(hyprctl cursorpos)" --transition-duration 4
+wal -i $1
+
+sass ~/.config/wofi/style.scss ~/.config/wofi/style.css;sass ~/.config/hypr/component/waybar/style.scss ~/.config/hypr/component/waybar/style.css
+
+bash ~/.config/hypr/scripts/genzathurarc
+
+bash ~/.config/hypr/scripts/launch_waybar &
+
+#wait
+
+#./relaunch_
+
+#bash $HOME/tt.sh

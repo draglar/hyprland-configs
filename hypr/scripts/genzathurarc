@@ -1,0 +1,76 @@
+#!/bin/sh
+
+# Generates zathura configuration file
+zathura_dir=~/.config/zathura
+mv $zathura_dir/zathurarc $zathura_dir/zathurarc.old
+
+. $HOME/.cache/wal/colors.sh
+
+function genconfig {
+cat <<CONF
+set recolor
+set sandbox none
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+set selection-clipboard clipboard
+set guioptions none
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map J scroll full-down
+map K scroll full-up
+map r reload
+map R rotate
+map A zoom in
+map D zoom out
+map i recolor
+map p print
+set font                        "Kollektif Mono 10"
+#set font                        "Jetbrains Mono 9"
+#prime one
+map b toggle_statusbar
+
+
+
+set default-fg 			    "$foreground"
+set default-bg 			    "$background"
+
+set completion-bg		    "$color2"
+set completion-fg		    "$foreground"
+set completion-highlight-bg	"$color9"
+set completion-highlight-fg	"$foreground"
+set completion-group-bg		"$color2"
+set completion-group-fg		"$color15"
+
+set statusbar-fg		    "$foreground"
+set statusbar-bg		    "$color2"
+
+set notification-bg		    "$color2"
+set notification-fg		    "$foreground"
+set notification-error-bg	"$color2"
+set notification-error-fg	"$color11"
+set notification-warning-bg	"$color2"
+set notification-warning-fg	"$color0"
+
+set inputbar-fg			    "$foreground"
+set inputbar-bg 		    "$color2"
+
+set recolor-lightcolor		"$background"
+set recolor-darkcolor		"$foreground"
+
+set index-fg			    "$foreground"
+set index-bg			    "$background"
+set index-active-fg		    "$foreground"
+set index-active-bg		    "$color2"
+
+set render-loading-bg		"$background"
+set render-loading-fg		"$foreground"
+
+set highlight-color		    "$color9"
+set highlight-fg            "$color15"
+set highlight-active-color	"$color15"
+CONF
+}
+genconfig >> "$zathura_dir/zathurarc"
+# ./genzathurarc >> "$zathura_dir/zathurarc"

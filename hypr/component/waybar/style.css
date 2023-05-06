@@ -1,0 +1,336 @@
+* {
+  font-family: FiraCode, Noto Sans, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-expand,
+#custom-cycle_wall,
+#custom-ss,
+#custom-dynamic_pill,
+#mpd {
+  padding: 0 10px;
+  border-radius: 15px;
+  background: #0b0a18;
+  color: #dca4a9;
+  box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+#custom-dynamic_pill label {
+  color: #5D284F;
+  font-weight: bold;
+}
+
+#custom-dynamic_pill.paused label {
+  color: #DF254C;
+  font-weight: bolder;
+}
+
+#workspaces button label {
+  color: #dca4a9;
+  font-weight: bolder;
+}
+
+#workspaces button.active label {
+  color: #0b0a18;
+  font-weight: bolder;
+}
+
+#workspaces {
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 25px;
+}
+
+#workspaces button {
+  box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
+  background-color: #0b0a18;
+  border-radius: 15px;
+  margin-right: 10px;
+  padding: 10px;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  font-weight: bolder;
+  color: #dca4a9;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#workspaces button.active {
+  padding-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.288) 2 2 5 2px;
+  padding-left: 20px;
+  padding-bottom: 3px;
+  background: rgb(203, 166, 247);
+  background: radial-gradient(circle, #E0132E 0%, #9B0A30 12%, #59465E 19%, #9B2551 20%, #DF254C 24%, #dca4a9 36%, #9a7276 37%, #5D284F 48%, #59465E 52%, #9B0A30 52%, #E0132E 59%, #9B2551 66%, #DF254C 67%, #dca4a9 68%, #9B2551 77%, #5D284F 78%, #59465E 82%, #9B0A30 83%, #9B2551 90%, #E0132E 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 30%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient_f {
+  0% {
+    background-position: 0% 200%;
+  }
+  50% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: 400% 200%;
+  }
+}
+@keyframes gradient_f_nh {
+  0% {
+    background-position: 0% 200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+#custom-dynamic_pill.low {
+  background: #0b0a18;
+  background: linear-gradient(52deg, #9B2551 0%, #E0132E 19%, #5D284F 43%, #E0132E 56%, #9B0A30 80%, #5D284F 100%);
+  background-size: 300% 300%;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  animation: gradient 15s ease infinite;
+  font-weight: bolder;
+  color: #dca4a9;
+}
+
+#custom-dynamic_pill.normal {
+  background: rgb(148, 226, 213);
+  background: radial-gradient(circle, #9B2551 0%, rgb(156, 227, 191) 21%, #59465E 34%, rgb(158, 227, 186) 35%, rgb(163, 227, 169) 59%, #9B2551 74%, rgb(164, 227, 167) 74%, rgb(166, 227, 161) 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 4s ease infinite;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  font-weight: bolder;
+  color: #fff;
+}
+
+#custom-dynamic_pill.critical {
+  background: rgb(235, 160, 172);
+  background: linear-gradient(52deg, rgb(235, 160, 172) 0%, rgb(243, 139, 168) 30%, rgb(231, 130, 132) 48%, rgb(250, 179, 135) 77%, #59465E 100%);
+  background-size: 300% 300%;
+  animation: gradient 15s cubic-bezier(0.55, -0.68, 0.48, 1.68) infinite;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  font-weight: bolder;
+  color: #fff;
+}
+
+#custom-dynamic_pill.playing {
+  background: rgb(137, 180, 250);
+  background: radial-gradient(circle, rgb(137, 180, 250) 0%, rgb(142, 179, 250) 6%, #9B2551 14%, rgb(147, 178, 250) 14%, rgb(155, 176, 249) 18%, rgb(245, 194, 231) 28%, rgb(158, 175, 249) 28%, rgb(181, 170, 248) 58%, #9B2551 69%, rgb(186, 169, 248) 69%, rgb(195, 167, 247) 72%, #E0132E 73%, rgb(198, 167, 247) 78%, #E0132E 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 9s cubic-bezier(0.72, 0.39, 0.21, 1) infinite;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  font-weight: bold;
+  color: #fff;
+}
+
+#custom-dynamic_pill.paused {
+  background: #0b0a18;
+  font-weight: bolder;
+  color: #dca4a9;
+}
+
+#custom-ss {
+  background: #0b0a18;
+  color: #59465E;
+  font-weight: bolder;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+}
+
+#custom-cycle_wall {
+  background: rgb(245, 194, 231);
+  background: linear-gradient(45deg, rgb(245, 194, 231) 0%, #E0132E 0%, rgb(243, 139, 168) 13%, rgb(235, 160, 172) 26%, rgb(250, 179, 135) 34%, #59465E 49%, rgb(166, 227, 161) 65%, #9B2551 77%, #E0132E 82%, rgb(116, 199, 236) 88%, #E0132E 95%);
+  color: #fff;
+  background-size: 500% 500%;
+  animation: gradient 7s linear infinite;
+  font-weight: bolder;
+  border-radius: 15px;
+}
+
+#clock label {
+  color: #dca4a9;
+  font-weight: bolder;
+}
+
+#clock {
+  background: #0b0a18;
+  background: radial-gradient(circle, #5D284F 0%, #59465E 12%, #9B0A30 19%, #9B2551 20%, #9a7276 24%, #5D284F 36%, #9a7276 37%, #5D284F 48%, #59465E 52%, #9B0A30 52%, #E0132E 59%, #9B2551 66%, #DF254C 67%, #dca4a9 68%, #9B2551 77%, #5D284F 78%, #59465E 82%, #9B0A30 83%, #59465E 90%, #5D284F 100%);
+  background-size: 500% 500%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+  margin-right: 25px;
+  color: #dca4a9;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  font-size: 15px;
+  padding-top: 5px;
+  padding-right: 21px;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+
+#battery.charging, #battery.plugged {
+  background-color: #dca4a9;
+  color: #0b0a18;
+}
+
+#battery {
+  background-color: #0b0a18;
+  color: #dca4a9;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@keyframes blink {
+  to {
+    background-color: #5D284F;
+    color: #59465E;
+  }
+}
+#battery.critical:not(.charging) {
+  background-color: #f38ba8;
+  color: #bf5673;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#cpu label {
+  color: #dca4a9;
+}
+
+#cpu {
+  background: #0b0a18;
+  color: #DF254C;
+}
+
+#memory {
+  background-color: #0b0a18;
+  color: #dca4a9;
+  font-weight: bolder;
+}
+
+#disk {
+  background-color: #dca4a9;
+  color: #0b0a18;
+}
+
+#backlight {
+  background-color: #0b0a18;
+  color: #dca4a9;
+}
+
+#network {
+  background-color: #dca4a9;
+  color: #0b0a18;
+}
+
+#network.disabled {
+  background-color: #0b0a18;
+  color: #59465E;
+}
+
+#network.disconnected {
+  background: #59465E;
+  background: linear-gradient(45deg, #59465E 0%, #9a7276 100%);
+  color: #5D284F;
+  font-weight: bolder;
+  padding-top: 3px;
+  padding-right: 11px;
+}
+
+#network.linked, #network.wifi {
+  background-color: #dca4a9;
+}
+
+#network.ethernet {
+  background-color: #DF254C;
+}
+
+#pulseaudio {
+  background-color: #0b0a18;
+  color: #dca4a9;
+  font-weight: bolder;
+}
+
+#pulseaudio.muted {
+  background-color: #9a7276;
+  color: #dca4a9;
+}
+
+#custom-media {
+  color: #66cc99;
+}
+
+#custom-media.custom-spotify {
+  background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+  background-color: #ffa000;
+}
+
+#temperature {
+  background-color: #f9e2af;
+  color: #96804e;
+}
+
+#temperature.critical {
+  background-color: #f38ba8;
+  color: #bf5673;
+}
+
+#tray {
+  background-color: #2980b9;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+/*# sourceMappingURL=style.css.map */
