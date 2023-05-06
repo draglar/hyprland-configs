@@ -1,1 +1,1 @@
-{"class": "playing", "text": "Ciaran McMeeken - Bed of the Lake - Bed of the Lake ", "tooltip": "Bed of the Lake\nby Ciaran McMeeken\nfrom Bed of the Lake\n(spotify)"}
+{"class": "paused", "text": "\u25b6 Cole Norton - Perfect - Perfect ", "tooltip": "Perfect\nby Cole Norton\nfrom Perfect\n(spotify)"}
