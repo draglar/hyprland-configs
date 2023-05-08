@@ -32,6 +32,11 @@ I made a small change to the wall script that changes the wallpaper.
 - Added the zathurarc generator
 - Waybar relaunch / reload
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DC7Y6sC7Ae4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## bug
+
+Sometimes waybar does not reload, in such cases it requires a manual waybar reload using the launch_waybar script
 
 # Examples
 - ![Pasted-image-2.png](.attatchments/Pasted-image-2.png)
