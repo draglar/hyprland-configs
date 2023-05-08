@@ -32,8 +32,6 @@ I made a small change to the wall script that changes the wallpaper.
 - Added the zathurarc generator
 - Waybar relaunch / reload
 
-
-
 ## bug
 
 Sometimes waybar does not reload, in such cases it requires a manual waybar reload using the launch_waybar script
