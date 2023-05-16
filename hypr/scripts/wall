@@ -4,7 +4,7 @@ swww init
 swww img $1 --transition-type grow --transition-pos "$(hyprctl cursorpos)" --transition-duration 4
 wal -i $1
 
-sass ~/.config/wofi/style.scss ~/.config/wofi/style.css;sass ~/.config/hypr/component/waybar/style.scss ~/.config/hypr/component/waybar/style.css
+sass ~/.config/wofi/style.scss ~/.config/wofi/style.css;sass ~/.config/hypr/component/waybar/style.scss ~/.config/hypr/component/waybar/style.css;sass ~/.themes/Sweet/gtk-3.0/gtk-dark.scss ~/.themes/Sweet/gtk-3.0/gtk-dark.css
 
 bash ~/.config/hypr/scripts/genzathurarc
 
